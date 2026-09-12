@@ -1,361 +1,382 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lebenslauf – Aman Enayat</title>
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.6;
-            margin: 0;
-            padding: 24px;
-            background-color: #F4F5F7;
-            color: #374151;
-        }
-        .cv {
-            max-width: 860px;
-            margin: 0 auto;
-            background: #fff;
-            border-radius: 8px;
-            overflow: hidden;
-            display: flex;
-        }
-        .bar { width: 8px; background: #1B3A6B; flex: none; }
-        .inner { padding: 32px 36px; flex: 1; min-width: 0; }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lebenslauf – Aman Enayat</title>
+<style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.6;
+        margin: 0;
+        padding: 24px;
+        background-color: #F4F5F7;
+        color: #374151;
+    }
+    .cv {
+        max-width: 860px;
+        margin: 0 auto;
+        background: #fff;
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+    }
+    .bar { width: 8px; background: #1B3A6B; flex: none; }
+    .inner { padding: 32px 36px; flex: 1; min-width: 0; }
 
-        h1 { font-size: 30px; font-weight: 400; margin: 0; color: #1F2933; }
-        h1 b { font-weight: 700; }
-        .role { font-size: 15px; margin: 6px 0 12px; color: #4B5563; }
-        .certs span {
-            display: inline-block; background: #EEF2F7; color: #33415A;
-            font-size: 12px; padding: 3px 10px; border-radius: 12px; margin: 0 6px 6px 0;
-        }
+    h1 { font-size: 30px; font-weight: 400; margin: 0; color: #1F2933; }
+    h1 b { font-weight: 700; }
+    .role { font-size: 15px; margin: 6px 0 12px; color: #4B5563; }
+    .certs span {
+        display: inline-block; background: #EEF2F7; color: #33415A;
+        font-size: 12px; padding: 3px 10px; border-radius: 12px; margin: 0 6px 6px 0;
+    }
 
-        h2 {
-            font-size: 15px; font-weight: 700; color: #1F2933;
-            margin: 30px 0 12px; padding-bottom: 6px; border-bottom: 1px solid #E3E7ED;
-        }
-        p { font-size: 14px; margin: 0; }
-        ul { font-size: 14px; margin: 6px 0 0; padding-left: 18px; }
-        li { margin-bottom: 4px; }
+    .kopf { display: flex; align-items: flex-start; justify-content: space-between; gap: 16px; }
+    .social { display: flex; gap: 8px; flex: none; padding-top: 6px; }
+    .social a {
+        display: flex; align-items: center; justify-content: center;
+        width: 32px; height: 32px; background: #EEF2F7; border-radius: 50%;
+        color: #1B3A6B; text-decoration: none;
+    }
+    .social a:hover { background: #1B3A6B; color: #fff; }
+    .social svg { width: 16px; height: 16px; fill: currentColor; }
 
-        .row { display: flex; gap: 24px; margin-bottom: 20px; }
-        .date { flex: 0 0 110px; font-size: 13px; color: #6B7280; padding-top: 2px; }
-        .category { flex: 0 0 110px; font-size: 13px; font-weight: bold; color: #1F2933; padding-top: 2px; }
-        .details { flex: 1; min-width: 0; }
-        .details strong { font-size: 15px; color: #1F2933; }
-        .details em { font-style: normal; font-size: 13px; color: #6B7280; }
-        .meta { font-size: 12px; color: #6B7280; margin-top: 3px; line-height: 1.4; }
+    h2 {
+        font-size: 15px; font-weight: 700; color: #1F2933;
+        margin: 30px 0 12px; padding-bottom: 6px; border-bottom: 1px solid #E3E7ED;
+    }
+    p { font-size: 14px; margin: 0; }
+    ul { font-size: 14px; margin: 6px 0 0; padding-left: 18px; }
+    li { margin-bottom: 4px; }
 
-        .berufserfolg {
-            background: #F0F6EF; border-left: 3px solid #4CAF50;
-            padding: 10px 14px; margin: 10px 0 0; font-size: 13.5px; color: #2F4F2F;
-        }
-        .berufserfolg strong { font-size: 13px; color: #2F4F2F; }
+    .row { display: flex; gap: 24px; margin-bottom: 20px; }
+    .date { flex: 0 0 110px; font-size: 13px; color: #6B7280; padding-top: 2px; }
+    .category { flex: 0 0 110px; font-size: 13px; font-weight: bold; color: #1F2933; padding-top: 2px; }
+    .details { flex: 1; min-width: 0; }
+    .details strong { font-size: 15px; color: #1F2933; }
+    .details em { font-style: normal; font-size: 13px; color: #6B7280; }
+    .meta { font-size: 12px; color: #6B7280; margin-top: 3px; line-height: 1.4; }
 
-        .tools { font-size: 13.5px; color: #4B5563; }
+    .berufserfolg {
+        background: #F0F6EF; border-left: 3px solid #4CAF50;
+        padding: 10px 14px; margin: 10px 0 0; font-size: 13.5px; color: #2F4F2F;
+    }
+    .berufserfolg strong { font-size: 13px; color: #2F4F2F; }
 
-        @media (max-width: 860px) {
-            .row { gap: 16px; }
-            .date, .category { flex: 0 0 90px; font-size: 12px; }
-        }
-        @media (max-width: 640px) {
-            body { padding: 12px; }
-            .inner { padding: 22px 20px; }
-            .row { flex-direction: column; gap: 4px; margin-bottom: 18px; }
-            .date, .category { flex: none; }
-        }
-        @media print {
-            body { background: #fff; padding: 0; }
-            .cv { max-width: none; border-radius: 0; }
-            .row { page-break-inside: avoid; }
-            h2 { page-break-after: avoid; }
-        }
-    </style>
+    .tools { font-size: 13.5px; color: #4B5563; }
+
+    @media (max-width: 860px) {
+        .row { gap: 16px; }
+        .date, .category { flex: 0 0 90px; font-size: 12px; }
+    }
+    @media (max-width: 640px) {
+        body { padding: 12px; }
+        .inner { padding: 22px 20px; }
+        .row { flex-direction: column; gap: 4px; margin-bottom: 18px; }
+        .date, .category { flex: none; }
+    }
+    @media print {
+        body { background: #fff; padding: 0; }
+        .cv { max-width: none; border-radius: 0; }
+        .row { page-break-inside: avoid; }
+        h2 { page-break-after: avoid; }
+        .social a { background: none; width: auto; height: auto; font-size: 12px; color: #374151; }
+        .social svg { margin-right: 4px; }
+        .social a::after { content: attr(href); }
+    }
+</style>
 </head>
 <body>
 
 <div class="cv">
-    <div class="bar"></div>
-    <div class="inner">
+<div class="bar"></div>
+<div class="inner">
 
-        <h1>Aman <b>Enayat</b></h1>
-        <p class="role">PRM-Chief Digitalisierung, Landesbetrieb Verkehr Hamburg</p>
-        <div class="certs">
-            <span>IPMA&reg; Level D</span>
-            <span>Interner Auditor ISO 9001:2015</span>
-            <span>Scrum Master&trade;</span>
-            <span>Product Owner&trade;</span>
+    <div class="kopf">
+        <div>
+            <h1>Aman <b>Enayat</b></h1>
+            <p class="role">PRM-Chief Digitalisierung, Landesbetrieb Verkehr Hamburg</p>
         </div>
-
-        <h2>Kurzprofil</h2>
-        <p>Digitalisierungsverantwortlicher im öffentlichen Sektor. Leitet aktuell ein bereichsweites
-            Digitalisierungsprojekt, das Prozessoptimierung, den Aufbau eines Qualitätsmanagementsystems nach
-            ISO 9001:2015 und die Einführung digitaler Arbeits- und Dokumentenstrukturen verbindet.
-            Fließend in Deutsch und Englisch (C1), verhandlungssicher in Hindi.</p>
-
-        <h2>Kernkompetenzen</h2>
-        <ul>
-            <li>Qualitätsmanagement nach ISO 9001:2015 &ndash; Systemaufbau, Dokumentenlenkung, interne Audits</li>
-            <li>Prozessmanagement &ndash; Analyse, Modellierung (BPMN) und Optimierung von Kernprozessen</li>
-            <li>Projektmanagement nach IPMA&reg; und Scrum &ndash; Planung und Steuerung (MS Project, Jira, Confluence)</li>
-            <li>Informations- und Dokumentenmanagement (DMS) &ndash; SharePoint, Wissensmanagement</li>
-            <li>Datenanalyse und Reporting &ndash; KPI-Dashboards, Power Query, Auswertung operativer Kennzahlen</li>
-            <li>Change Management und Befähigung &ndash; Kommunikationsstrategien, Schulungen, Tool-Einführung</li>
-        </ul>
-
-        <h2>Berufserfahrung</h2>
-
-        <div class="row">
-            <div class="date">seit 03/2026</div>
-            <div class="details">
-                <strong>PRM-Chief Digitalisierung</strong><br>
-                <em>LBV &ndash; Landesbetrieb Verkehr, Parkraummanagement Hamburg</em>
-                <ul>
-                    <li>Steuerung der Digitalisierung des Parkraummanagements als Schnittstelle zwischen Leitung, Fachbereichen und IT</li>
-                    <li>Projektleitung zur Einführung eines Qualitätsmanagementsystems nach ISO 9001:2015 inkl. Projektstruktur- und Ressourcenplanung</li>
-                    <li>Analyse und Modellierung der Kernprozesse in BPMN als Grundlage für das QM-Handbuch und gezielte Prozessoptimierungen</li>
-                </ul>
-            </div>
+        <div class="social">
+            <a href="https://www.linkedin.com/in/aman-enayat-b5b0895b/" target="_blank" rel="noopener" aria-label="LinkedIn-Profil"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1-.02 5.001A2.5 2.5 0 0 1 4.98 3.5zM3 8.98h4V21H3V8.98zM9.5 8.98h3.83v1.64h.05c.53-1 1.84-2.06 3.79-2.06 4.05 0 4.8 2.67 4.8 6.14V21h-4v-5.58c0-1.33-.02-3.05-1.86-3.05-1.86 0-2.15 1.45-2.15 2.95V21h-4V8.98z"/></svg></a>
+            <a href="https://www.xing.com/profile/Aman_Enayat" target="_blank" rel="noopener" aria-label="Xing-Profil"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.6 6.6h3.2c.2 0 .36.1.46.29l1.6 2.8c.1.18.1.35 0 .53l-2.6 4.6c-.1.18-.26.28-.46.28H2.6c-.2 0-.32-.17-.22-.35l2.6-4.53L3.38 6.95c-.1-.18.02-.35.22-.35z"/><path d="M17.7 2.2h3.2c.2 0 .32.17.22.35l-5.4 9.55 3.44 6.32c.1.18-.02.35-.22.35h-3.2c-.2 0-.36-.1-.46-.29l-3.46-6.38 5.42-9.58c.1-.19.26-.32.46-.32z"/></svg></a>
         </div>
-
-        <div class="row">
-            <div class="date">04/2025 &ndash; 02/2026</div>
-            <div class="details">
-                <strong>Digitale Hauptsachbearbeitung</strong><br>
-                <em>LBV &ndash; Landesbetrieb Verkehr, Parkraummanagement Hamburg</em>
-                <ul>
-                    <li>Aufbau eines zentralen SharePoint-Bereichs und Dokumentenmanagementsystems (DMS) für das Parkraummanagement</li>
-                    <li>Anforderungserhebung und Dokumentation digitaler Arbeitsprozesse</li>
-                </ul>
-                <div class="berufserfolg">
-                    <strong>Berufserfolg:</strong><br>
-                    Etablierte mit einem zentralen SharePoint-Bereich und Dokumentenmanagementsystem erstmals
-                    eine einheitliche, normkonform gelenkte Ablage als führendes System für das gesamte
-                    Parkraummanagement.
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="date">01/2023 &ndash; 09/2023</div>
-            <div class="details">
-                <strong>PMO-Analyst</strong><br>
-                <em>DPS &ndash; IT for Finance, Retail and Public Sector, Hamburg</em>
-                <ul>
-                    <li>Planung, Ressourcen- und Budgetmanagement sowie Koordination von Projekten von der Anforderungserhebung bis zur Übergabe</li>
-                    <li>Erfassung, Kategorisierung und Behebung von Incidents im First-Level-Service gemäß SLA-Vorgaben sowie Schnittstelle zwischen Kunden und Second-Level-Service</li>
-                    <li>Durchführung von Datenanalysen und Erstellung von Berichten für die Leitungsebene</li>
-                    <li>Verwaltung von Jira-Tickets, Backlog und Änderungswünschen mittels Systemanalysen zur Ermittlung von IST- und SOLL-Zuständen</li>
-                    <li>Qualitätssicherung durch Definition, Erstellung und Dokumentation von Testfällen</li>
-                </ul>
-                <div class="berufserfolg">
-                    <strong>Berufserfolg:</strong><br>
-                    Erzielte eine Verkürzung der Bearbeitungszeit der monatlichen Berichterstattung für Kunden
-                    und Leitungsebene von 14 auf 7 Tage durch prozessoptimierende Maßnahmen.
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="date">08/2020 &ndash; 12/2022</div>
-            <div class="details">
-                <strong>Assistant Consultant / BA-Student</strong><br>
-                <em>DPS &ndash; IT for Finance, Retail and Public Sector, Hamburg</em>
-                <ul>
-                    <li>Erstellung und Verwaltung von Jira-KPI-Dashboards und Confluence-Wiki-Seiten</li>
-                    <li>Durchführung von Defect-Analysen in Jira und Prozessabbildungen mit BPMN zur Optimierung von Geschäftsprozessen</li>
-                    <li>Unterstützung der Leitungsebene bei Aufwandsverteilung, Rechnungsmanagement sowie Erstellung von Kundenangeboten und Abnahmeerklärungen</li>
-                    <li>Einrichtung von Testsystemen zur Systembetreuung und Sicherstellung der Funktionalität</li>
-                </ul>
-                <div class="berufserfolg">
-                    <strong>Berufserfolg:</strong><br>
-                    Steigerte Transparenz und Einhaltung der Service Levels durch Aufbau und Pflege von
-                    Jira-KPI-Dashboards und Confluence-Wiki-Seiten.
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="date">08/2011 &ndash; 06/2017</div>
-            <div class="details">
-                <strong>PMO Lead</strong><br>
-                <em>North Marcopolo Ltd. / GRS Company Ltd.</em>
-                <ul>
-                    <li>Verwaltung von Ressourcen, Zeitplänen und Budgets zur Kostenkontrolle in Projekten</li>
-                    <li>Verantwortung für das Projektportfolio und Ausrichtung an Unternehmenszielen</li>
-                    <li>Hauptansprechpartner für Projektbeteiligte, regelmäßige Status- und Risikoupdates</li>
-                </ul>
-                <div class="berufserfolg">
-                    <strong>Berufserfolg:</strong><br>
-                    Optimierte Ressourcenallokation und Finanzverwaltung durch die Einführung von QuickBooks
-                    Enterprise als Ersatz für das zuvor Excel-basierte System.
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="date">03/2009 &ndash; 06/2011</div>
-            <div class="details">
-                <strong>Business Operations Manager</strong><br>
-                <em>Hadad Group of Companies, Bagram</em>
-                <ul>
-                    <li>Verwaltung von Ressourcen, Zeitplänen und Budgets zur Kostenkontrolle in Projekten</li>
-                    <li>Anforderungsmanagement, Ressourcenkoordination und -beschaffung</li>
-                </ul>
-                <div class="berufserfolg">
-                    <strong>Berufserfolg:</strong><br>
-                    Steigerte die Prozesseffizienz im Projektportfoliomanagement durch die Einführung von
-                    Microsoft Project.
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="date">08/2008 &ndash; 02/2009</div>
-            <div class="details">
-                <strong>Construction Projects Coordinator</strong><br>
-                <em>Hadad Road &amp; Construction Company, Bagram</em>
-                <ul>
-                    <li>Koordination und Überwachung der Bauprozesse</li>
-                    <li>Stakeholder-Analyse und -Steuerung sowie fachliche Leitstelle für Projekte</li>
-                </ul>
-                <div class="berufserfolg">
-                    <strong>Berufserfolg:</strong><br>
-                    Verbesserte die Zusammenarbeit mit Stakeholdern in Bauprojekten durch transparente
-                    Kommunikation und die Implementierung von Zoho CRM.
-                </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="date">09/2004 &ndash; 06/2008</div>
-            <div class="details">
-                <strong>Project Administrator / Site Construction Engineer</strong><br>
-                <em>Asian Engineering &amp; Construction Company Ltd., Kabul</em>
-                <ul>
-                    <li>Verwaltung von Projektzeitplänen, Meilensteinen und Deadlines</li>
-                    <li>Inspektionen, Qualitätskontrollen und Koordination von Bauprojekten</li>
-                </ul>
-                <div class="berufserfolg">
-                    <strong>Berufserfolg:</strong><br>
-                    Verbesserte Zusammenarbeit und Dokumentenverwaltung durch die Einführung von SharePoint
-                    als EDMS zur Zentralisierung und Versionskontrolle.
-                </div>
-            </div>
-        </div>
-
-        <h2>Bildungsweg</h2>
-
-        <div class="row">
-            <div class="date">seit 04/2026</div>
-            <div class="details">
-                <strong>Masterstudium Digitalisierungsmanagement</strong><br>
-                <em>FernUniversit&auml;t in Hagen</em>
-                <div class="meta">Berufsbegleitend</div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="date">11/2023 &ndash; 04/2024</div>
-            <div class="details">
-                <strong>Zertifizierung in Prozess- und Projektmanagement</strong><br>
-                <em>CBM Projektmanagement GmbH, Hamburg/Berlin</em>
-                <div class="meta">IPMA&reg; Level D, Professional Scrum Master, Professional Scrum Product Owner</div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="date">08/2020 &ndash; 09/2023</div>
-            <div class="details">
-                <strong>Bachelorstudium Wirtschaftsinformatik</strong><br>
-                <em>Nordakademie &ndash; Hochschule der Wirtschaft, Elmshorn</em>
-                <div class="meta">4 Semester, 74 ECTS</div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="date">09/2012 &ndash; 08/2016</div>
-            <div class="details">
-                <strong>Bachelor of Business Administration</strong><br>
-                <em>Kardan University, Kabul</em>
-                <div class="meta">In Deutschland anerkannt, international akkreditiert (IACBE, ACBSP)</div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="date">03/2004 &ndash; 06/2008</div>
-            <div class="details">
-                <strong>Dual Associate&rsquo;s Degrees in Construction and Electrical Engineering</strong><br>
-                <em>Afghanistan Technical Vocational Institute, Kabul<br>
-                    Higher Mechanical Education Institute, Kabul</em>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="date">03/1991 &ndash; 03/2003</div>
-            <div class="details">
-                <strong>Allgemeine Hochschulreife</strong><br>
-                <em>Etebar Khan High School, Kabul</em>
-            </div>
-        </div>
-
-        <h2>IT-Kompetenzen</h2>
-
-        <div class="row">
-            <div class="category">Prozess und Qualität</div>
-            <div class="details">
-                <ul>
-                    <li><strong>Prozessmodellierung:</strong> Geschäftsprozessmodellierung in BPMN mit Microsoft Visio, SAP Signavio und Camunda.</li>
-                    <li><strong>QM-Dokumentation:</strong> Aufbau und Lenkung von Verfahrens- und Arbeitsanweisungen nach ISO 9001:2015 inkl. Vorlagen- und Nummerierungssystematik.</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="category">Informations&shy;management</div>
-            <div class="details">
-                <ul>
-                    <li><strong>SharePoint und DMS:</strong> Aufbau zentraler SharePoint-Bereiche, Informationsarchitektur, Berechtigungs- und Versionskonzepte, Dokumentenlenkung.</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="category">Daten und Reporting</div>
-            <div class="details">
-                <ul>
-                    <li><strong>Datenaufbereitung:</strong> Aufbau durchgängiger Datenstrecken von MS Forms über SharePoint zu Power Query; KPI-Dashboards zur operativen Steuerung.</li>
-                    <li><strong>Excel und Visualisierung:</strong> Datenmanipulation, -analyse und komplexe Tabellenmodelle in Excel; Datenvisualisierung mit Microsoft Power BI und Tableau.</li>
-                    <li><strong>Datenformate:</strong> Verarbeitung von XML-, JSON- und CSV-Daten mit Visual Studio Code und Notepad++.</li>
-                    <li><strong>Datenbanken:</strong> Erstellung komplexer SQL-Abfragen; vertraut mit Toad for Oracle, DataGrip und SQL Developer.</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="category">Projekt&shy;steuerung</div>
-            <div class="details">
-                <ul>
-                    <li><strong>Agile und ITSM-Plattformen:</strong> Jira, Confluence, Miro und Slack zur Projektverfolgung und Teamkoordination; Change-, Incident- und Problem-Management mit Jira Service Management.</li>
-                    <li><strong>Planungstools:</strong> MS Project, Primavera und Gantt-Diagramme zur Termin- und Ressourcenplanung.</li>
-                </ul>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="category">Entwicklung und Systeme</div>
-            <div class="details">
-                <ul>
-                    <li><strong>Programmierkenntnisse:</strong> Zusammenarbeit mit Entwicklungsteams, Verständnis von Java, OOP und Entwicklungsumgebungen wie IntelliJ und Eclipse.</li>
-                    <li><strong>Versionskontrolle:</strong> Git zur Unterstützung von Entwicklungsprojekten und Release-Management.</li>
-                    <li><strong>SAP S/4HANA und ABAP:</strong> Verständnis der Kernkonzepte und Funktionalitäten von ABAP sowie der S/4HANA-Architektur.</li>
-                </ul>
-            </div>
-        </div>
-
     </div>
+    <div class="certs">
+        <span>IPMA&reg; Level D</span>
+        <span>Interner Auditor ISO 9001:2015</span>
+        <span>Scrum Master&trade;</span>
+        <span>Product Owner&trade;</span>
+    </div>
+
+    <h2>Kurzprofil</h2>
+    <p>Digitalisierungsverantwortlicher im öffentlichen Sektor. Leitet aktuell ein bereichsweites
+    Digitalisierungsprojekt, das Prozessoptimierung, den Aufbau eines Qualitätsmanagementsystems nach
+    ISO 9001:2015 und die Einführung digitaler Arbeits- und Dokumentenstrukturen verbindet.
+    Fließend in Deutsch und Englisch (C1), verhandlungssicher in Hindi.</p>
+
+    <h2>Kernkompetenzen</h2>
+    <ul>
+        <li>Qualitätsmanagement nach ISO 9001:2015 &ndash; Systemaufbau, Dokumentenlenkung, interne Audits</li>
+        <li>Prozessmanagement &ndash; Analyse, Modellierung (BPMN) und Optimierung von Kernprozessen</li>
+        <li>Projektmanagement nach IPMA&reg; und Scrum &ndash; Planung und Steuerung (MS Project, Jira, Confluence)</li>
+        <li>Informations- und Dokumentenmanagement (DMS) &ndash; SharePoint, Wissensmanagement</li>
+        <li>Datenanalyse und Reporting &ndash; KPI-Dashboards, Power Query, Auswertung operativer Kennzahlen</li>
+        <li>Change Management und Befähigung &ndash; Kommunikationsstrategien, Schulungen, Tool-Einführung</li>
+    </ul>
+
+    <h2>Berufserfahrung</h2>
+
+    <div class="row">
+        <div class="date">seit 03/2026</div>
+        <div class="details">
+            <strong>PRM-Chief Digitalisierung</strong><br>
+            <em>LBV &ndash; Landesbetrieb Verkehr, Parkraummanagement Hamburg</em>
+            <ul>
+                <li>Steuerung der Digitalisierung des Parkraummanagements als Schnittstelle zwischen Leitung, Fachbereichen und IT</li>
+                <li>Projektleitung zur Einführung eines Qualitätsmanagementsystems nach ISO 9001:2015 inkl. Projektstruktur- und Ressourcenplanung</li>
+                <li>Analyse und Modellierung der Kernprozesse in BPMN als Grundlage für das QM-Handbuch und gezielte Prozessoptimierungen</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="date">04/2025 &ndash; 02/2026</div>
+        <div class="details">
+            <strong>Digitale Hauptsachbearbeitung</strong><br>
+            <em>LBV &ndash; Landesbetrieb Verkehr, Parkraummanagement Hamburg</em>
+            <ul>
+                <li>Aufbau eines zentralen SharePoint-Bereichs und Dokumentenmanagementsystems (DMS) für das Parkraummanagement</li>
+                <li>Anforderungserhebung und Dokumentation digitaler Arbeitsprozesse</li>
+            </ul>
+            <div class="berufserfolg">
+                <strong>Berufserfolg:</strong><br>
+                Etablierte mit einem zentralen SharePoint-Bereich und Dokumentenmanagementsystem erstmals
+                eine einheitliche, normkonform gelenkte Ablage als führendes System für das gesamte
+                Parkraummanagement.
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="date">01/2023 &ndash; 09/2023</div>
+        <div class="details">
+            <strong>PMO-Analyst</strong><br>
+            <em>DPS &ndash; IT for Finance, Retail and Public Sector, Hamburg</em>
+            <ul>
+                <li>Planung, Ressourcen- und Budgetmanagement sowie Koordination von Projekten von der Anforderungserhebung bis zur Übergabe</li>
+                <li>Erfassung, Kategorisierung und Behebung von Incidents im First-Level-Service gemäß SLA-Vorgaben sowie Schnittstelle zwischen Kunden und Second-Level-Service</li>
+                <li>Durchführung von Datenanalysen und Erstellung von Berichten für die Leitungsebene</li>
+                <li>Verwaltung von Jira-Tickets, Backlog und Änderungswünschen mittels Systemanalysen zur Ermittlung von IST- und SOLL-Zuständen</li>
+                <li>Qualitätssicherung durch Definition, Erstellung und Dokumentation von Testfällen</li>
+            </ul>
+            <div class="berufserfolg">
+                <strong>Berufserfolg:</strong><br>
+                Erzielte eine Verkürzung der Bearbeitungszeit der monatlichen Berichterstattung für Kunden
+                und Leitungsebene von 14 auf 7 Tage durch prozessoptimierende Maßnahmen.
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="date">08/2020 &ndash; 12/2022</div>
+        <div class="details">
+            <strong>Assistant Consultant / BA-Student</strong><br>
+            <em>DPS &ndash; IT for Finance, Retail and Public Sector, Hamburg</em>
+            <ul>
+                <li>Erstellung und Verwaltung von Jira-KPI-Dashboards und Confluence-Wiki-Seiten</li>
+                <li>Durchführung von Defect-Analysen in Jira und Prozessabbildungen mit BPMN zur Optimierung von Geschäftsprozessen</li>
+                <li>Unterstützung der Leitungsebene bei Aufwandsverteilung, Rechnungsmanagement sowie Erstellung von Kundenangeboten und Abnahmeerklärungen</li>
+                <li>Einrichtung von Testsystemen zur Systembetreuung und Sicherstellung der Funktionalität</li>
+            </ul>
+            <div class="berufserfolg">
+                <strong>Berufserfolg:</strong><br>
+                Steigerte Transparenz und Einhaltung der Service Levels durch Aufbau und Pflege von
+                Jira-KPI-Dashboards und Confluence-Wiki-Seiten.
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="date">08/2011 &ndash; 06/2017</div>
+        <div class="details">
+            <strong>PMO Lead</strong><br>
+            <em>North Marcopolo Ltd. / GRS Company Ltd.</em>
+            <ul>
+                <li>Verwaltung von Ressourcen, Zeitplänen und Budgets zur Kostenkontrolle in Projekten</li>
+                <li>Verantwortung für das Projektportfolio und Ausrichtung an Unternehmenszielen</li>
+                <li>Hauptansprechpartner für Projektbeteiligte, regelmäßige Status- und Risikoupdates</li>
+            </ul>
+            <div class="berufserfolg">
+                <strong>Berufserfolg:</strong><br>
+                Optimierte Ressourcenallokation und Finanzverwaltung durch die Einführung von QuickBooks
+                Enterprise als Ersatz für das zuvor Excel-basierte System.
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="date">03/2009 &ndash; 06/2011</div>
+        <div class="details">
+            <strong>Business Operations Manager</strong><br>
+            <em>Hadad Group of Companies, Bagram</em>
+            <ul>
+                <li>Verwaltung von Ressourcen, Zeitplänen und Budgets zur Kostenkontrolle in Projekten</li>
+                <li>Anforderungsmanagement, Ressourcenkoordination und -beschaffung</li>
+            </ul>
+            <div class="berufserfolg">
+                <strong>Berufserfolg:</strong><br>
+                Steigerte die Prozesseffizienz im Projektportfoliomanagement durch die Einführung von
+                Microsoft Project.
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="date">08/2008 &ndash; 02/2009</div>
+        <div class="details">
+            <strong>Construction Projects Coordinator</strong><br>
+            <em>Hadad Road &amp; Construction Company, Bagram</em>
+            <ul>
+                <li>Koordination und Überwachung der Bauprozesse</li>
+                <li>Stakeholder-Analyse und -Steuerung sowie fachliche Leitstelle für Projekte</li>
+            </ul>
+            <div class="berufserfolg">
+                <strong>Berufserfolg:</strong><br>
+                Verbesserte die Zusammenarbeit mit Stakeholdern in Bauprojekten durch transparente
+                Kommunikation und die Implementierung von Zoho CRM.
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="date">09/2004 &ndash; 06/2008</div>
+        <div class="details">
+            <strong>Project Administrator / Site Construction Engineer</strong><br>
+            <em>Asian Engineering &amp; Construction Company Ltd., Kabul</em>
+            <ul>
+                <li>Verwaltung von Projektzeitplänen, Meilensteinen und Deadlines</li>
+                <li>Inspektionen, Qualitätskontrollen und Koordination von Bauprojekten</li>
+            </ul>
+            <div class="berufserfolg">
+                <strong>Berufserfolg:</strong><br>
+                Verbesserte Zusammenarbeit und Dokumentenverwaltung durch die Einführung von SharePoint
+                als EDMS zur Zentralisierung und Versionskontrolle.
+            </div>
+        </div>
+    </div>
+
+    <h2>Bildungsweg</h2>
+
+    <div class="row">
+        <div class="date">seit 04/2026</div>
+        <div class="details">
+            <strong>Masterstudium Digitalisierungsmanagement</strong><br>
+            <em>FernUniversit&auml;t in Hagen</em>
+            <div class="meta">Berufsbegleitend</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="date">11/2023 &ndash; 04/2024</div>
+        <div class="details">
+            <strong>Zertifizierung in Prozess- und Projektmanagement</strong><br>
+            <em>CBM Projektmanagement GmbH, Hamburg/Berlin</em>
+            <div class="meta">IPMA&reg; Level D, Professional Scrum Master, Professional Scrum Product Owner</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="date">08/2020 &ndash; 09/2023</div>
+        <div class="details">
+            <strong>Bachelorstudium Wirtschaftsinformatik</strong><br>
+            <em>Nordakademie &ndash; Hochschule der Wirtschaft, Elmshorn</em>
+            <div class="meta">4 Semester, 74 ECTS</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="date">09/2012 &ndash; 08/2016</div>
+        <div class="details">
+            <strong>Bachelor of Business Administration</strong><br>
+            <em>Kardan University, Kabul</em>
+            <div class="meta">In Deutschland anerkannt, international akkreditiert (IACBE, ACBSP)</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="date">03/2004 &ndash; 06/2008</div>
+        <div class="details">
+            <strong>Dual Associate&rsquo;s Degrees in Construction and Electrical Engineering</strong><br>
+            <em>Afghanistan Technical Vocational Institute, Kabul<br>
+            Higher Mechanical Education Institute, Kabul</em>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="date">03/1991 &ndash; 03/2003</div>
+        <div class="details">
+            <strong>Allgemeine Hochschulreife</strong><br>
+            <em>Etebar Khan High School, Kabul</em>
+        </div>
+    </div>
+
+    <h2>IT-Kompetenzen</h2>
+
+    <div class="row">
+        <div class="category">Prozess und Qualität</div>
+        <div class="details">
+            <ul>
+                <li><strong>Prozessmodellierung:</strong> Geschäftsprozessmodellierung in BPMN mit Microsoft Visio, SAP Signavio und Camunda.</li>
+                <li><strong>QM-Dokumentation:</strong> Aufbau und Lenkung von Verfahrens- und Arbeitsanweisungen nach ISO 9001:2015 inkl. Vorlagen- und Nummerierungssystematik.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="category">Informations&shy;management</div>
+        <div class="details">
+            <ul>
+                <li><strong>SharePoint und DMS:</strong> Aufbau zentraler SharePoint-Bereiche, Informationsarchitektur, Berechtigungs- und Versionskonzepte, Dokumentenlenkung.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="category">Daten und Reporting</div>
+        <div class="details">
+            <ul>
+                <li><strong>Datenaufbereitung:</strong> Aufbau durchgängiger Datenstrecken von MS Forms über SharePoint zu Power Query; KPI-Dashboards zur operativen Steuerung.</li>
+                <li><strong>Excel und Visualisierung:</strong> Datenmanipulation, -analyse und komplexe Tabellenmodelle in Excel; Datenvisualisierung mit Microsoft Power BI und Tableau.</li>
+                <li><strong>Datenformate:</strong> Verarbeitung von XML-, JSON- und CSV-Daten mit Visual Studio Code und Notepad++.</li>
+                <li><strong>Datenbanken:</strong> Erstellung komplexer SQL-Abfragen; vertraut mit Toad for Oracle, DataGrip und SQL Developer.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="category">Projekt&shy;steuerung</div>
+        <div class="details">
+            <ul>
+                <li><strong>Agile und ITSM-Plattformen:</strong> Jira, Confluence, Miro und Slack zur Projektverfolgung und Teamkoordination; Change-, Incident- und Problem-Management mit Jira Service Management.</li>
+                <li><strong>Planungstools:</strong> MS Project, Primavera und Gantt-Diagramme zur Termin- und Ressourcenplanung.</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="category">Entwicklung und Systeme</div>
+        <div class="details">
+            <ul>
+                <li><strong>Programmierkenntnisse:</strong> Zusammenarbeit mit Entwicklungsteams, Verständnis von Java, OOP und Entwicklungsumgebungen wie IntelliJ und Eclipse.</li>
+                <li><strong>Versionskontrolle:</strong> Git zur Unterstützung von Entwicklungsprojekten und Release-Management.</li>
+                <li><strong>SAP S/4HANA und ABAP:</strong> Verständnis der Kernkonzepte und Funktionalitäten von ABAP sowie der S/4HANA-Architektur.</li>
+            </ul>
+        </div>
+    </div>
+
+</div>
 </div>
 
 </body>
